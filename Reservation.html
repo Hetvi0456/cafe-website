@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonbucks Café Reservation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8b0d31;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .reservation-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #2e2828;
+        }
+        label {
+            font-size: 14px;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reservation-form">
+        <h1>Café Reservation</h1>
+        <form action="#" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Full Name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email Address">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{10}" required placeholder="Your Phone Number">
+
+            <label for="date">Reservation Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Reservation Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="people">Number of People</label>
+            <select id="people" name="people" required>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7+ people</option>
+            </select>
+
+            <label for="special-requests">Special Requests</label>
+            <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any special requests or dietary preferences?"></textarea>
+
+            <button type="submit">Reserve Table</button>
+        </form>
+
+        <div class="form-footer">
+            <p>We look forward to serving you!</p>
+        </div>
+    </div>
+
+</body>
+</html>
